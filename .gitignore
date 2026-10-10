@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+*.log
+.mac-build/
+dist-mac/
+*.iconset/
+
+# secrets
+.env
+*.env
+*.pem
+*.key
+config.local.*
+.DS_Store

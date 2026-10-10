@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- 把 W1 服务器上的出网代理(127.0.0.1:7890)经 SSH 隧道映射到本机 17890。
+       本机直连 Binance(fapi 等) 被墙时，交易训练室走这条代理就能拿到美股/港股/大宗/合约行情。 -->
+  <key>Label</key><string>com.william.zk-market-tunnel</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/ssh</string>
+    <string>-N</string>
+    <string>-o</string><string>ExitOnForwardFailure=yes</string>
+    <string>-o</string><string>ServerAliveInterval=30</string>
+    <string>-o</string><string>ServerAliveCountMax=3</string>
+    <string>-o</string><string>BatchMode=yes</string>
+    <string>-o</string><string>StrictHostKeyChecking=accept-new</string>
+    <string>-L</string><string>17890:127.0.0.1:7890</string>
+    <string>wt</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>10</integer>
+  <key>StandardOutPath</key><string>/tmp/zk-market-tunnel.log</string>
+  <key>StandardErrorPath</key><string>/tmp/zk-market-tunnel.err</string>
+</dict>
+</plist>

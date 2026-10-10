@@ -1,0 +1,34 @@
+{
+  "name": "zhuk-replay-studio",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "description": "交易训练室：历史行情逐K回放、定时交易员训练与模拟交易工作台。",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5188 --strictPort",
+    "build": "tsc -b && vite build",
+    "start": "node serve.mjs",
+    "test": "vitest run",
+    "verify": "npm run test && npm run build",
+    "typecheck": "tsc -b",
+    "lint": "node scripts/check.mjs",
+    "ci": "bash scripts/ci.sh"
+  },
+  "dependencies": {
+    "lightweight-charts": "5.2.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "typescript": "5.9.3",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

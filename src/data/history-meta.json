@@ -1,0 +1,11 @@
+{
+  "source": "OKX",
+  "symbol": "BTC-USDT-SWAP",
+  "interval": "1m",
+  "timezone": "UTC+8",
+  "count": 6944,
+  "start": 1788681600,
+  "end": 1789098180,
+  "initialCursor": 3330,
+  "initialTime": 1788881340
+}
